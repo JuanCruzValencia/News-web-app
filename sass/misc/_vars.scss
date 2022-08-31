@@ -1,0 +1,28 @@
+/* BORDER AND MARGIN SIZES */
+$xsmall: 1rem;
+$small: 2rem;
+$medium: 2.5rem;
+$large: 3rem;
+/* FONT SIZES */
+$text-fontSize: 2em;
+$title-fontSize: 2.2em;
+$sup-title-fontSize: 2.5em;
+/* FONT STYLES */
+$title-fontStyle: "Italiana", serif;
+$text-fontStyle: "Poppins", sans-serif;
+/* COLORS */
+$main-color: #2191fb;
+$text-color: #1d3557;
+$title-color: #2a2d34;
+$stickynotes-color: #e63946;
+$weatherapp-color: #f1faee;
+$calc-color: #000000;
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

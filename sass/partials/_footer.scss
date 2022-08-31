@@ -1,0 +1,10 @@
+.foot__container {
+  grid-column: 1/4;
+  grid-row: 17/20;
+  display: flex;
+  margin-top: $xsmall;
+  justify-content: center;
+  align-items: center;
+  background-color: #777;
+  min-height: 80px;
+}

@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); /* fonts */
+@import "./misc/vars";
+@import "./misc/normalize";
+@import "./partials/moment";
+@import "./partials/spinner";
+
+@import "./partials/header";
+@import "./index.scss";
+@import "./pages/login";
+
+@import "./partials/weatherApp";
+@import "./partials/stickyNoteApp";
+@import "./partials/calcApp";
+
+@import "./partials/footer";

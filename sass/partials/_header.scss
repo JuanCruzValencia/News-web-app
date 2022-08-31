@@ -1,0 +1,93 @@
+.header__container {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  background-color: $title-color;
+  max-height: 100px;
+  margin-bottom: $xsmall;
+  & .nav__container {
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    & .nav__ul {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      gap: $xsmall;
+      & h1 {
+        color: #e5faf6;
+      }
+      & .nav__li {
+        margin-left: $xsmall;
+        list-style: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        & a {
+          text-decoration: none;
+          color: #e5faf6;
+        }
+      }
+      & #play_container {
+        & #play_button {
+          text-transform: uppercase;
+          font-size: $small;
+          background-color: $title-color;
+          color: #fff;
+          border: transparent;
+          cursor: pointer;
+          padding: $xsmall;
+          font-weight: bolder;
+          &:hover {
+            color: orange;
+          }
+        }
+      }
+    }
+    & .nav__form {
+      display: flex;
+      align-items: center;
+      gap: $xsmall;
+      margin-right: $small;
+      & #input_search {
+        font-size: 0.7em;
+        padding: 0.5em;
+      }
+      & #btn_search {
+        width: 100%;
+        background-color: #fff;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #222;
+        cursor: pointer;
+        font-size: 0.7em;
+        padding: 0.5rem;
+        margin-right: $small;
+        &:hover {
+          background-color: $stickynotes-color;
+          color: rgb(47, 53, 46);
+        }
+      }
+      & #random-btn {
+        font-size: 1.5em;
+        font-weight: 800;
+        height: 50px;
+        width: 50px;
+        background: linear-gradient(
+          45deg,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet,
+          red
+        );
+        border: none;
+        border-radius: 100%;
+        animation: rotar infinite 2s;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>newsPage</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header class="header__container">
+      <nav class="nav__container">
+        <ul class="nav__ul">
+          <h1 class="nav__title">JSNews</h1>
+          <li class="nav__li"><a href="./index.html">Home</a></li>
+          <li class="nav__li"><a href="./pages/articles.html">Articulos</a></li>
+          <li class="nav__li">
+            <!-- Boton para agregar un clima personalizado -->
+            <div id="play_container">
+              <button id="play_button">Clima++</button>
+            </div>
+          </li>
+          <li class="nav__li"><a href="./pages/login.html">Login</a></li>
+        </ul>
+        <div class="nav__form">
+          <input
+            type="text"
+            placeholder="Nombre del Articulo"
+            id="input_search"
+          />
+          <button id="btn_search">buscar</button>
+          <div class="random_background">
+            <button id="random-btn">?</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main__container">
+      <div id="moment__container"></div>
+      <article class="main__hero">
+        <figure>
+          <img src="./assets/img/BunjsLogoOnLaptop-1.jpg" alt="hero_img" />
+          <figcaption>
+            Bun.js is a new JavaScript runtime but why are so many developers
+            excited by it?
+          </figcaption>
+        </figure>
+        <h3>
+          What Is Bun.js and Why Is the JavaScript Community Excited About It?
+        </h3>
+        <p>
+          Getting new frameworks and libraries all the time is something
+          JavaScript is famous for. In July 2022 the ecosystem welcomed a new
+          member: Bun.js. Here, we'll take a look at Bun.js and see how it
+          affects the wider JavaScript ecosystem.
+        </p>
+      </article>
+      <div class="main__socialMedia">
+        <ul>
+          <li>facebook</li>
+          <li>instagram</li>
+          <li>youtube</li>
+          <li>twitter</li>
+        </ul>
+      </div>
+      <section class="index__section">
+        <article class="section__notes">
+          <figure>
+            <img src="./assets/img/1366_2000.jpg" alt="nota1_img" />
+            <figcaption>
+              17 Julio 2022Actualizado 17 Julio 2022, 10:32
+            </figcaption>
+          </figure>
+          <h4>
+            Este ebook gratis te enseñará qué son los patrones de diseño y cómo
+            aplicarlos al desarrollo de aplicaciones JavaScript / React
+          </h4>
+          <p>
+            Llamamos 'patrón de diseño' a ciertas soluciones más o menos
+            estandarizadas a problemas recurrentes que sufren los programadores,
+            y que además te permiten ahorrar tiempo al comunicarte con tus
+            compañeros de equipo, al dotaros de un lenguaje común: puedes hablar
+            con ellos de implementar una 'abstract factory' sin necesidad de
+            andar explicando el esquema de funcionamiento del mismo.
+          </p>
+        </article>
+        <article class="section__notes">
+          <figure>
+            <img src="./assets/img/nota2.jpg" alt="nota2_img" />
+            <figcaption>
+              20 millones de desarrolladores de JavaScript ya pueden crear
+              aplicaciones en NEAR: KBW 2022
+            </figcaption>
+          </figure>
+          <h4>
+            20 millones de desarrolladores de JavaScript ya pueden crear
+            aplicaciones en NEAR: KBW 2022
+          </h4>
+          <p>
+            20 millones de desarrolladores de JavaScript ahora tendrán la
+            capacidad de escribir contratos inteligentes de blockchain y
+            construir aplicaciones en el Near Protocol después de lanzar los
+            Kits de Desarrollo de Software de JavaScript (JS SDKs) el lunes.
+            Adopción masiva del metaverso y el papel de la tecnología blockchain
+            Hablando con Cointelegraph en la Korea Blockchain Week (KBW) el
+            martes, el fundador de Near, Illia Polosukhin, enfatizó que la
+            medida abrirá el campo de nicho del desarrollo de blockchain a una
+            audiencia sustancialmente más amplia.
+          </p>
+        </article>
+      </section>
+    </main>
+    <aside class="aside__container">
+      <!-- Titulo del Desafio y nombre -->
+      <h4 class="aside__h4">Widgets</h4>
+      <!-- Contenedor de toda la vista -->
+        <div class="app_container">
+          <!-- Contenedor de los inputs -->
+          <div class="input_container">
+            <input
+              type="text"
+              placeholder="Buenos Aires, Madrid, Miami o California?"
+              class="city_input"
+            />
+            <button class="submit_input">Enviar</button>
+          </div>
+          <!-- Contendor de la informacion de la cuidad -->
+          <div class="information_container">
+            <div class="cityInfo_container">
+              <h2 class="city--name"></h2>
+              <h4 class="city--date"></h4>
+            </div>
+            <!-- Informacion del clima -->
+            <div class="weather-info_container">
+              <div class="weather-info_container1">
+                <div class="icon"></div>
+                <div class="temperature"></div>
+              </div>
+              <div class="weather-info_container2">
+                <div class="humidity"></div>
+                <div class="wind"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Agregando un formulario flotante para que el usuario ingrese su clima -->
+        <div id="weather_form-container">
+          <h2 class="weather_form-title">crea tu clima personalizado</h2>
+          <div class="form_instructions">
+            <p class="form_instructions-text">
+              Completa el formulario para crear tu propio clima
+            </p>
+          </div>
+          <form id="weather_form">
+            <label for="weather_input-cityName"
+              >Ingrese el nombre de la ciudad</label
+            >
+            <input
+              type="text"
+              id="weather_input-cityName"
+              placeholder="Ej: Buenos aires"
+            />
+            <label for="weather_input-temperature"
+              >Ingrese la temperatura que esta haciendo</label
+            >
+            <input
+              type="text"
+              id="weather_input-temperature"
+              placeholder="Ej: 23"
+            />
+            <label for="weather_input-humidity"
+              >Ingrese el porcentaje de humedad</label
+            >
+            <input
+              type="text"
+              id="weather_input-humidity"
+              placeholder="Ej: 98"
+            />
+            <label for="weather_input-wind"
+              >Ingrese la velocidad del viento</label
+            >
+            <input type="text" id="weather_input-wind" placeholder="Ej: 10" />
+            <label for="weather_input-icon"
+              >Ingrese Soleado, Nublado, LLuvias, Espectacular u Horrible</label
+            >
+            <input
+              type="text"
+              id="weather_input-icon"
+              placeholder="Ej: Soleado"
+            />
+          </form>
+          <div>
+            <button id="form_ok-button">aceptar</button>
+            <button id="form_cancel-button">cancelar</button>
+          </div>
+        </div>
+        <!-- Agregando un sticky note a la app como posible mejora -->
+        <div class="sticky_container">
+          <h3 class="sticky_title">Notas:</h3>
+          <div class="notes_container">
+            <button class="note_button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Calculadora -->
+        <div class="calc__container">
+          <div id="calc__keys">
+            <div id="calc__display">0</div>
+            <button id="calc__clear">C</button>
+            <button id="calc__numbers">7</button>
+            <button id="calc__numbers">8</button>
+            <button id="calc__numbers">9</button>
+            <button id="calc__operations">+</button>
+            <button id="calc__numbers">4</button>
+            <button id="calc__numbers">5</button>
+            <button id="calc__numbers">6</button>
+            <button id="calc__operations">-</button>
+            <button id="calc__numbers">1</button>
+            <button id="calc__numbers">2</button>
+            <button id="calc__numbers">3</button>
+            <button id="calc__operations">*</button>
+            <button id="calc__operations">/</button>
+            <button id="calc__numbers">0</button>
+            <button id="calc__numbers">.</button>
+            <button id="calc__result">=</button>
+          </div>
+        </div>
+      <!-- Fondo aleatorio -->
+    </aside>
+    <footer class="foot__container">Dev by Juan Cruz Valencia</footer>
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="./js/momentTimeApp.js"></script>
+    <script src="./js/weatherApp.js"></script>
+    <script src="./js/stickyNotesApp.js"></script>
+    <script src="./js/calculatorApp.js"></script>
+    <script src="./js/randomBg.js"></script>
+    <!-- script de los inconos -->
+    <script
+      src="https://kit.fontawesome.com/c539e2d60d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

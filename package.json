@@ -1,0 +1,20 @@
+{
+  "name": "entrega-final-js---coderhouse",
+  "version": "1.0.0",
+  "description": "Trabajo final Javascript para CoderHouse",
+  "main": "./weatherApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --include-path scss sass/export.scss style/style.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+
+  },
+  "author": "Juan Cruz Valencia Vernengo",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

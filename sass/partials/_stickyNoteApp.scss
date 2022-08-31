@@ -1,0 +1,53 @@
+.aside__container {
+  & .sticky_container {
+    display: flex;
+    flex-flow: column;
+    min-height: 600px;
+    width: 430px;
+    margin: 5rem auto;
+    justify-content: flex-start;
+    background-color: #8cdedc;
+    border-radius: 7px;
+    border: 1px solid #222;
+    & .sticky_title {
+      align-self: flex-start;
+      padding: $xsmall;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgb(47, 53, 46);
+    }
+    & .notes_container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      & .sticky-note {
+        background-color: #b2ece1;
+        margin: $xsmall;
+        border-radius: 7px;
+        height: 150px;
+        width: 400px;
+        overflow: scroll;
+        padding: $xsmall;
+        font-size: 1em;
+      }
+      & .sticky-note::-webkit-scrollbar {
+        display: none;
+      }
+      & .note_button {
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: $xsmall;
+        border: none;
+        outline: none;
+        border-radius: 7px;
+        height: 150px;
+        width: 200px;
+        font-size: $sup-title-fontSize;
+        font-weight: 900;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <!-- header and navbar -->
+    <header class="header__container">
+      <nav class="nav__container">
+        <ul class="nav__ul">
+          <h1 class="nav__title">JSNews</h1>
+          <li class="nav__li"><a href="../index.html">Home</a></li>
+          <li class="nav__li"><a href="./articles.html">Articulos</a></li>
+          <li class="nav__li">
+            <!-- Boton para agregar un clima personalizado -->
+            <div id="play_container">
+              <button id="play_button">Clima++</button>
+            </div>
+          </li>
+          <li class="nav__li"><a href="./login.html">Login</a></li>
+        </ul>
+        <div action="" class="nav__form">
+          <input
+            type="text"
+            placeholder="Nombre del Articulo"
+            id="input_search"
+          />
+          <button id="btn_search">buscar</button>
+          <div class="random_background">
+            <button id="random-btn">?</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main login and signup -->
+    <main class="main__log-sign">
+      <!-- login -->
+      <div id="login__container">
+        <form id="login__form">
+          <h2 id="login__title">Login</h2>
+          <input
+            id="login__input-username"
+            type="text"
+            placeholder="Username"
+          />
+          <input
+            id="login__input-password"
+            type="password"
+            placeholder="Password"
+          />
+          <span><a href="#">Olvidaste la contrasena?</a></span>
+          <button id="login__btn" type="submit">Ingresar</button>
+          <span>No sos miembro? <i class="fa-solid fa-circle-arrow-right"></i></span>
+        </form>
+      </div>
+      <!-- signup -->
+      <div id="signup__container">
+        <form id="signup__form">
+          <h2 id="signup__title">Registrate!</h2>
+          <label for="signup__name">Nombre Completo</label>
+          <input
+            type="text"
+            placeholder="Escribe tu nombre"
+            id="signup__name"
+          />
+          <label for="signup__username">Nombre de Usuario</label>
+          <input
+            type="text"
+            id="signup__username"
+            placeholder="Escribe tu usuario"
+          />
+          <label for="signup__email">Email</label>
+          <input
+            type="email"
+            id="signup__email"
+            placeholder="Escribe tu email"
+          />
+          <label for="signup__password">Contrasena</label>
+          <input
+            type="password"
+            id="signup__password"
+            placeholder="Escribe tu contrsena"
+          />
+          <label for="signup__repassword">Confirme Contrasena</label>
+          <input
+            type="password"
+            id="signup__repassword"
+            placeholder="Escribe tu contrasena"
+          />
+          <button id="signup__btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="foot__container">Dev by Juan Cruz Valencia</footer>
+    <!-- SCRIPTS -->
+    <script src="../js/randomBg.js"></script>
+    <!-- script de los inconos -->
+    <script
+      src="https://kit.fontawesome.com/c539e2d60d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
