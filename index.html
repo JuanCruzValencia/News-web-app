@@ -22,6 +22,9 @@
             </div>
           </li>
           <li class="nav__li"><a href="./pages/login.html">Login</a></li>
+          <li class="nav__li">
+            <i id="userOnOff" class="fa-solid fa-user"></i>
+          </li>
         </ul>
         <div class="nav__form">
           <input
@@ -115,118 +118,114 @@
       <!-- Titulo del Desafio y nombre -->
       <h4 class="aside__h4">Widgets</h4>
       <!-- Contenedor de toda la vista -->
-        <div class="app_container">
-          <!-- Contenedor de los inputs -->
-          <div class="input_container">
-            <input
-              type="text"
-              placeholder="Buenos Aires, Madrid, Miami o California?"
-              class="city_input"
-            />
-            <button class="submit_input">Enviar</button>
+      <div class="app_container">
+        <!-- Contenedor de los inputs -->
+        <div class="input_container">
+          <input
+            type="text"
+            placeholder="Buenos Aires, Madrid, Miami o California?"
+            class="city_input"
+          />
+          <button class="submit_input">Enviar</button>
+        </div>
+        <!-- Contendor de la informacion de la cuidad -->
+        <div class="information_container">
+          <div class="cityInfo_container">
+            <h2 class="city--name"></h2>
+            <h4 class="city--date"></h4>
           </div>
-          <!-- Contendor de la informacion de la cuidad -->
-          <div class="information_container">
-            <div class="cityInfo_container">
-              <h2 class="city--name"></h2>
-              <h4 class="city--date"></h4>
+          <!-- Informacion del clima -->
+          <div class="weather-info_container">
+            <div class="weather-info_container1">
+              <div class="icon"></div>
+              <div class="temperature"></div>
             </div>
-            <!-- Informacion del clima -->
-            <div class="weather-info_container">
-              <div class="weather-info_container1">
-                <div class="icon"></div>
-                <div class="temperature"></div>
-              </div>
-              <div class="weather-info_container2">
-                <div class="humidity"></div>
-                <div class="wind"></div>
-              </div>
+            <div class="weather-info_container2">
+              <div class="humidity"></div>
+              <div class="wind"></div>
             </div>
           </div>
         </div>
-        <!-- Agregando un formulario flotante para que el usuario ingrese su clima -->
-        <div id="weather_form-container">
-          <h2 class="weather_form-title">crea tu clima personalizado</h2>
-          <div class="form_instructions">
-            <p class="form_instructions-text">
-              Completa el formulario para crear tu propio clima
-            </p>
-          </div>
-          <form id="weather_form">
-            <label for="weather_input-cityName"
-              >Ingrese el nombre de la ciudad</label
-            >
-            <input
-              type="text"
-              id="weather_input-cityName"
-              placeholder="Ej: Buenos aires"
-            />
-            <label for="weather_input-temperature"
-              >Ingrese la temperatura que esta haciendo</label
-            >
-            <input
-              type="text"
-              id="weather_input-temperature"
-              placeholder="Ej: 23"
-            />
-            <label for="weather_input-humidity"
-              >Ingrese el porcentaje de humedad</label
-            >
-            <input
-              type="text"
-              id="weather_input-humidity"
-              placeholder="Ej: 98"
-            />
-            <label for="weather_input-wind"
-              >Ingrese la velocidad del viento</label
-            >
-            <input type="text" id="weather_input-wind" placeholder="Ej: 10" />
-            <label for="weather_input-icon"
-              >Ingrese Soleado, Nublado, LLuvias, Espectacular u Horrible</label
-            >
-            <input
-              type="text"
-              id="weather_input-icon"
-              placeholder="Ej: Soleado"
-            />
-          </form>
-          <div>
-            <button id="form_ok-button">aceptar</button>
-            <button id="form_cancel-button">cancelar</button>
-          </div>
+      </div>
+      <!-- Agregando un formulario flotante para que el usuario ingrese su clima -->
+      <div id="weather_form-container">
+        <h2 class="weather_form-title">crea tu clima personalizado</h2>
+        <div class="form_instructions">
+          <p class="form_instructions-text">
+            Completa el formulario para crear tu propio clima
+          </p>
         </div>
-        <!-- Agregando un sticky note a la app como posible mejora -->
-        <div class="sticky_container">
-          <h3 class="sticky_title">Notas:</h3>
-          <div class="notes_container">
-            <button class="note_button">
-              <i class="fa-solid fa-plus"></i>
-            </button>
-          </div>
+        <form id="weather_form">
+          <label for="weather_input-cityName"
+            >Ingrese el nombre de la ciudad</label
+          >
+          <input
+            type="text"
+            id="weather_input-cityName"
+            placeholder="Ej: Buenos aires"
+          />
+          <label for="weather_input-temperature"
+            >Ingrese la temperatura que esta haciendo</label
+          >
+          <input
+            type="text"
+            id="weather_input-temperature"
+            placeholder="Ej: 23"
+          />
+          <label for="weather_input-humidity"
+            >Ingrese el porcentaje de humedad</label
+          >
+          <input type="text" id="weather_input-humidity" placeholder="Ej: 98" />
+          <label for="weather_input-wind"
+            >Ingrese la velocidad del viento</label
+          >
+          <input type="text" id="weather_input-wind" placeholder="Ej: 10" />
+          <label for="weather_input-icon"
+            >Ingrese Soleado, Nublado, LLuvias, Espectacular u Horrible</label
+          >
+          <input
+            type="text"
+            id="weather_input-icon"
+            placeholder="Ej: Soleado"
+          />
+        </form>
+        <div>
+          <button id="form_ok-button">aceptar</button>
+          <button id="form_cancel-button">cancelar</button>
         </div>
-        <!-- Calculadora -->
-        <div class="calc__container">
-          <div id="calc__keys">
-            <div id="calc__display">0</div>
-            <button id="calc__clear">C</button>
-            <button id="calc__numbers">7</button>
-            <button id="calc__numbers">8</button>
-            <button id="calc__numbers">9</button>
-            <button id="calc__operations">+</button>
-            <button id="calc__numbers">4</button>
-            <button id="calc__numbers">5</button>
-            <button id="calc__numbers">6</button>
-            <button id="calc__operations">-</button>
-            <button id="calc__numbers">1</button>
-            <button id="calc__numbers">2</button>
-            <button id="calc__numbers">3</button>
-            <button id="calc__operations">*</button>
-            <button id="calc__operations">/</button>
-            <button id="calc__numbers">0</button>
-            <button id="calc__numbers">.</button>
-            <button id="calc__result">=</button>
-          </div>
+      </div>
+      <!-- Agregando un sticky note a la app como posible mejora -->
+      <div class="sticky_container">
+        <h3 class="sticky_title">Notas:</h3>
+        <div class="notes_container">
+          <button class="note_button">
+            <i class="fa-solid fa-plus"></i>
+          </button>
         </div>
+      </div>
+      <!-- Calculadora -->
+      <div class="calc__container">
+        <div id="calc__keys">
+          <div id="calc__display">0</div>
+          <button id="calc__clear">C</button>
+          <button id="calc__numbers">7</button>
+          <button id="calc__numbers">8</button>
+          <button id="calc__numbers">9</button>
+          <button id="calc__operations">+</button>
+          <button id="calc__numbers">4</button>
+          <button id="calc__numbers">5</button>
+          <button id="calc__numbers">6</button>
+          <button id="calc__operations">-</button>
+          <button id="calc__numbers">1</button>
+          <button id="calc__numbers">2</button>
+          <button id="calc__numbers">3</button>
+          <button id="calc__operations">*</button>
+          <button id="calc__operations">/</button>
+          <button id="calc__numbers">0</button>
+          <button id="calc__numbers">.</button>
+          <button id="calc__result">=</button>
+        </div>
+      </div>
       <!-- Fondo aleatorio -->
     </aside>
     <footer class="foot__container">Dev by Juan Cruz Valencia</footer>
@@ -237,6 +236,7 @@
     <script src="./js/stickyNotesApp.js"></script>
     <script src="./js/calculatorApp.js"></script>
     <script src="./js/randomBg.js"></script>
+    <script src="./js/userState.js"></script>
     <!-- script de los inconos -->
     <script
       src="https://kit.fontawesome.com/c539e2d60d.js"
