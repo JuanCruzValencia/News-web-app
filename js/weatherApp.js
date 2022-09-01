@@ -1,4 +1,4 @@
-//Creacion de clase y sus metodos
+//Creacion de clase climas y sus metodos que me va as servir para crear climas personalizados
 class Season {
   constructor(
     cityName,
@@ -48,7 +48,7 @@ class Season {
     let todayNum = todayDate.getDate();
     this.date = `${todayDay}, ${todayNum} de ${todayMonth}`;
   }
-  //Medoto para obtener el icono del clima
+  //Medoto para obtener el icono del clima segun el input de creacion personalizada
   getNewIcon(userInput) {
     const icons = [
       '<i class="fa-solid fa-sun"></i>',
@@ -77,7 +77,7 @@ class Season {
   }
 }
 
-//Objetos creados a partir de mi clase constructora
+//Objetos creados a partir de mi clase constructora usados en una primera instancia cuando no tenia datos de la API
 const summer = new Season(
   "Buenos Aires",
   "32",
@@ -116,7 +116,7 @@ const spring = new Season(
 );
 let allSeasons = [summer, autumn, winter, spring];
 
-//Guardo los climas pre establecidos en el localStorage
+//Guardo los climas pre establecidos en el localStorage para que el usuario los traiga
 localStorage.setItem("weathers", JSON.stringify(allSeasons));
 
 //funcion que guarda mis climas en el Local Storage
@@ -219,8 +219,8 @@ function newWeather() {
 //Sumando fetch al weather app
 
 //Llamo a un clima predeterminado para que la pagina no se cargue en blanco
-getApi('buenos aires');
-
+getApi("buenos aires");
+//funcion asincrona con metodo fetch para traer lo datos del clima
 async function getApi(cityname) {
   const responseCity = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=03adbe821115f7243907f98e45c546bc&units=metric`
@@ -228,7 +228,7 @@ async function getApi(cityname) {
   const data = await responseCity.json();
   showApi(data);
 }
-
+//funcion que usa los datos de la api y los plasma en pantalla
 function showApi(data) {
   let htmlCityName = document.querySelector(".city--name");
   let htmlCityDate = document.querySelector(".city--date");
@@ -249,7 +249,9 @@ function showApi(data) {
 
 //Evento cuando el usuario ingresa uno cuidad
 const inputSubmit = document.querySelector(".submit_input");
-inputSubmit.addEventListener("click", () => getApi(document.querySelector(".city_input").value));
+inputSubmit.addEventListener("click", () =>
+  getApi(document.querySelector(".city_input").value)
+);
 
 //Metodo para obtener el dia de hoy
 function getToday() {

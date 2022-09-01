@@ -66,7 +66,7 @@ loginBtn.addEventListener("submit", (e) => {
   e.preventDefault();
   login();
 });
-//funcion que toma el ingrso de usuario y contrasena
+//funcion que toma el ingreso de usuario y contrasena
 function login() {
   let userName = document.getElementById("login__username").value;
   let password = document.getElementById("login__password").value;
