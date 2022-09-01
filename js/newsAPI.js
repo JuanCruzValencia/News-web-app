@@ -1,7 +1,7 @@
 //fetch a pagina de noticias
 
 async function getNewsData(){
-    const resolve = await fetch('https://newsapi.org/v2/everything?q=Apple&from=2022-08-22&sortBy=popularity&apiKey=685dcb3b459241c7afde8894cf2fa3d3');
+    const resolve = await fetch('https://gnews.io/api/v4/search?q=javascript&token=17e743a1414b2b389fcf5e3237b590f7');
     const data = await resolve.json();
     getData(data);
 };
@@ -13,10 +13,10 @@ function getData(data){
     newsContainer.innerHTML = ' ';
     data.articles.map(article => {
         const card = document.createElement('article');
-        card.classList.add('section__notes');
+        card.classList.add('article__sectionNotes');
         card.innerHTML = `<figure>
-                                <img src='${article.urlToImage}' alt='${article.author}'/>
-                                <figcaption>${article.author}</figcaption>
+                                <img src='${article.image}' alt='${article.title}'/>
+                                <figcaption>${article.publishedAt}</figcaption>
                             </figure>
                             <h4>${article.title}</h4>
                             <p>${article.description}</p>`
@@ -36,7 +36,7 @@ document.getElementById('btn_search').addEventListener('click', () =>{
 });
 
 function filterArticles(artSearch){
-    fetch(`https://newsapi.org/v2/everything?q=${artSearch}&from=2022-08-22&sortBy=popularity&apiKey=685dcb3b459241c7afde8894cf2fa3d3`)
+    fetch(`https://gnews.io/api/v4/search?q=${artSearch}&token=17e743a1414b2b389fcf5e3237b590f7`)
     .then(resolve => resolve.json())
     .then(data => {
         spinner.style.display = 'inline-block';

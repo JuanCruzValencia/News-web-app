@@ -16,7 +16,7 @@ class User {
 }
 //Evento boton registrar nuevo usuario
 const signupBtn = document.getElementById("signup__btn");
-signupBtn.addEventListener("click", (e) => {
+signupBtn.addEventListener("submit", (e) => {
   e.preventDefault();
   register();
 });
@@ -62,7 +62,7 @@ function validateSignup(newUser) {
 }
 //boton y evento para loguearse
 const loginBtn = document.getElementById("login__btn");
-loginBtn.addEventListener("click", (e) => {
+loginBtn.addEventListener("submit", (e) => {
   e.preventDefault();
   login();
 });

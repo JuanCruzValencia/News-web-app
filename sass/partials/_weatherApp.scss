@@ -42,7 +42,7 @@
       display: flex;
       flex-flow: column wrap;
       background-color: #daa588;
-      justify-content: space-evenly;
+      justify-content: space-around;
       border-radius: 7px;
       text-align: center;
       & .cityInfo_container {
@@ -64,7 +64,7 @@
         font-weight: 600;
         & .icon > img {
           object-fit: contain;
-          height: 150px;
+          height: 100px;
           width: 100%;
         }
 

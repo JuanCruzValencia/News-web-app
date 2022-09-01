@@ -1,0 +1,12 @@
+.main__container {
+  & .article__sectionNotes {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    border: 1px solid #333;
+    padding: $xsmall;
+    & > h4{
+        text-align: center;
+    }
+  }
+}

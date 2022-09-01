@@ -10,8 +10,7 @@
     border-radius: 7px;
     border: 1px solid #222;
     & .sticky_title {
-      align-self: flex-start;
-      padding: $xsmall;
+      align-self: center;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: rgb(47, 53, 46);
@@ -40,7 +39,7 @@
         outline: none;
         border-radius: 7px;
         height: 150px;
-        width: 200px;
+        width: 400px;
         font-size: $sup-title-fontSize;
         font-weight: 900;
         cursor: pointer;

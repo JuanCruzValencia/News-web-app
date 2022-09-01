@@ -1,22 +1,12 @@
-//Primer acumulador
+//numero actual
 let firstNumber = [];
-//Resultado
+//acumulador
 let secondNum = [];
+//operacion
+let opSign = [];
 
 //Tomo del html el display donde van a aparecer los numeros
 const display = document.getElementById('calc__display');
-
-//Tomo la operacion equal que me devuelve el resultado con un evento
-const btnResult = document.getElementById('calc__result');
-btnResult.addEventListener('click', () => {
-    calculator();
-});
-function calculator() { //funcion que hace el calculo
-    secondNum.push(firstNumber.join(''));
-    let opDisplay = eval(secondNum.join(''));
-    (opDisplay % 1) != 0 ? opDisplay = opDisplay.toFixed(2) : opDisplay;
-    display.innerText = opDisplay;
-};
 
 //Tomamos los operadores y le agregamos el evento
 const btnOperations = document.querySelectorAll('#calc__operations');
@@ -27,9 +17,20 @@ btnOperations.forEach((btn) => {
 });
 //Funcion que guarda el calculo y devuelve el resultado
 function operation(operation) {
-    secondNum.push(firstNumber.join(''), operation);
-    display.innerText += operation;
-    firstNumber = [];
+    if(operation != '=' && secondNum.length === 0) {
+        secondNum.push(firstNumber.join(''));
+        opSign.push(operation);
+        firstNumber = [];
+        display.innerText += operation;
+    } else {
+        let calc = eval(secondNum.join('')) + opSign + eval(firstNumber.join(''));
+        let result = eval(calc);
+        (result % 1) != 0 ? result = result.toFixed(2) : result;
+        display.innerText = result;
+        firstNumber = [result];
+        secondNum = [];
+        opSign = [];
+    };
 };
 
 //Tomamos botones de los numeros y le agregamos el evento de ver en pantalla
@@ -54,4 +55,5 @@ function clearDisplay() { //funcion que deja en cero el display
     display.innerText = 0;
     firstNumber = [];
     secondNum = [];
+    opSign = [];
 };
