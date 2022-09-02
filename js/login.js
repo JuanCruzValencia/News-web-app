@@ -16,8 +16,7 @@ class User {
 }
 //Evento boton registrar nuevo usuario
 const signupBtn = document.getElementById("signup__btn");
-signupBtn.addEventListener("submit", (e) => {
-  e.preventDefault();
+signupBtn.addEventListener("click", () => {
   register();
 });
 //funcion para registrar nuevo usuario
@@ -62,8 +61,7 @@ function validateSignup(newUser) {
 }
 //boton y evento para loguearse
 const loginBtn = document.getElementById("login__btn");
-loginBtn.addEventListener("submit", (e) => {
-  e.preventDefault();
+loginBtn.addEventListener("click", () => {
   login();
 });
 //funcion que toma el ingreso de usuario y contrasena
@@ -107,3 +105,11 @@ function changeState(userStateIcon) {
     ? (userBtn.style.color = "green")
     : (userBtn.style.color = "red");
 }
+
+//prevenir cuando el usuario toca enter
+document.querySelectorAll(".form__inputAll").onkeypress = (e) => {
+  let key = e.charCode || e.keyCode || 0;
+  if (key == 13) {
+    e.preventDefault();
+  }
+};
