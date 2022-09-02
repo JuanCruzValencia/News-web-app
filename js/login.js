@@ -78,7 +78,6 @@ function validateUser(userName, password) {
     if (user.userName === userName && user.password === password) {
       window.location.href = "../index.html";
       changeState("online");
-      console.log("porque");
       return true;
     }
     alert("Usuario o contrasena incorrecto");
