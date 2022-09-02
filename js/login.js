@@ -78,6 +78,7 @@ function validateUser(userName, password) {
     if (user.userName === userName && user.password === password) {
       window.location.href = "../index.html";
       changeState("online");
+      console.log("porque");
       return true;
     }
     alert("Usuario o contrasena incorrecto");
@@ -109,7 +110,6 @@ function changeState(userStateIcon) {
 
 //prevenir cuando el usuario toca enter
 let allInputs = document.querySelectorAll(".form__inputAll");
-console.log(allInputs)
 allInputs.forEach((input) => {
   input.addEventListener("keypress", (e) => {
     let key = e.charCode || e.keyCode || 0;
