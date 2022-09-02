@@ -31,6 +31,7 @@ function register() {
   let newUser = new User(fullName, userName, email, password, rePassword);
   //verifico que los campos sean correctos
   if (validateSignup(newUser)) {
+    alert("Registrado con exito");
     users.push(newUser);
     saveUser(users);
     document.getElementById("signup__form").reset();
@@ -107,9 +108,14 @@ function changeState(userStateIcon) {
 }
 
 //prevenir cuando el usuario toca enter
-document.querySelectorAll(".form__inputAll").onkeypress = (e) => {
-  let key = e.charCode || e.keyCode || 0;
-  if (key == 13) {
-    e.preventDefault();
-  }
-};
+let allInputs = document.querySelectorAll(".form__inputAll");
+console.log(allInputs)
+allInputs.forEach((input) => {
+  input.addEventListener("keypress", (e) => {
+    let key = e.charCode || e.keyCode || 0;
+    if (key == 13) {
+      alert("No presione la tecla enter");
+      e.preventDefault();
+    }
+  });
+});
