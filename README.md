@@ -5,7 +5,7 @@ Link to live version - [JS News](https://juancruzvalencia.github.io/proyectoFina
 Balto's Shop is a e-commerce web application that allows users to search for products stored in Firestore, add them to shopping cart and then make payment. App has login system functionality. The guest user is able to browse and add product to cart only. Checkout and payment option is available for registerd users.
 
 ## DEMO
-
+[](https://github.com/JuanCruzValencia/proyectoFinalJS/blob/master/JS-final.png?raw=true)
 
 ## UX
 The purpose of the the project is to create a web app for javascript couse in CoderHouse. Layout is simple and clear. For build the front-end functionality Vanilla Javascript is used.
