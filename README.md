@@ -1,6 +1,6 @@
 # JS News - News Portal Javascript App Project
 
-Link to live version - [JS News](https://juancruzvalencia.github.io/proyectoFinalJS/index.html)
+Link to live version - [JS News](https://juancruzvalencia.github.io/News-web-app/)
 
 ## DEMO
 ![](https://github.com/JuanCruzValencia/proyectoFinalJS/blob/master/JS-final.png?raw=true)
